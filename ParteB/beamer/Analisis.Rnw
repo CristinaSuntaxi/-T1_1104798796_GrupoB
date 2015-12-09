@@ -1,0 +1,77 @@
+\documentclass[12pt]{report}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{Sweave}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{anysize}
+\marginsize{1.78cm}{1.65cm}{1.78cm}{1.78cm} 
+
+\title{\Huge Universidad Nacional de Loja \\ 
+Área de la Energía las Industrias y los Recursos Naturales no Renovables \\
+Ingeniería en Sistemas \\}
+
+
+\author{\includegraphics[width=9cm, height=7cm]{logo-unl.jpg} \\\\ \href{http://www.iralis.org/?q=node\%2F10\&paso=10\&letra=\&id=7221}{ECINF7231} \\\\ \texttt{Martha Cristina Suntaxi Sarango \\ mcsuntaxis@unl.edu.ec \\\\ }}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\maketitle{\textbf {PARTE B}
+\\[19]
+\textbf{\large Análisis de Datos}
+\\[8]
+\textbf{¿Es aplicable la ingeniería de software cuando se elaboran webapps? Si es así, ¿cómo puede modificarse para que asimile las características únicas de éstas?}
+\\[5]
+Si se aplica, pero para esto el enfoque de ingenieria de software debe centrarse en ciertos requisitos o atributos propios de las webapps como la concurrencia, el uso intensivo de redes, disponibilidad, rendimiento y otros que son atributos de webapps.
+\\[10]
+\textbf{Dataset}
+\\
+Titanic
+\\\\
+\textbf{Descripción}
+\\
+Este conjunto de datos proporciona información sobre el destino de los pasajeros en el primer viaje fatal del trasatlántico Titanic, que se resumen de acuerdo a la situación económica (clase), el sexo, la edad y la supervivencia.
+\\\\
+\textbf{Formato}
+\\
+Una matriz de 4-dimensional resultante de cruzar los datos tabulados de 2201 observaciones sobre 4 variables. Las variables y sus niveles son los siguientes:
+\\
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+No & Nombre & Niveles \\
+\hline \hline
+1	& Clase	& Primero, segundo, tercero, Tripulación \\ \hline
+2	& Sexo	& Hombre, Mujer \\ \hline
+3	& Años	& Niño, Adulto \\ \hline
+4	& Sobrevivieron	& No, si \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\\\\
+\textbf{Detalles}
+\\
+Estos datos fueron recogidos originalmente por la Junta Británica de Comercio en su investigación del hundimiento.
+\\
+El hundimiento del Titanic es un evento famoso, y nuevos libros siguen siendo publicado sobre el tema.
+\\\\
+\textbf{Fuente}
+\\
+Dawson, Robert J. MACG. (1995), El 'Episodio inusual' Datos Revisited. Diario de Estadísticas de Educación, 3. \url{Https://www.amstat.org/publications/jse/v3n3/datasets.dawson.html}
+\\\\
+\textbf{Mostrar el dataset}
+
+<<eval=TRUE, results=verbatim>>=
+Titanic
+@
+\textbf{¿Cuál es el número total de casos en el dataset?}
+<<eval=TRUE, echo=FALSE>>=
+summary(Titanic)
+@
+\begin{center}
+\href{http://creativecommons.org/licenses/by-nc/4.0/}{\includegraphics[width=4cm, height=1.5cm]{cc.png}}
+\end{center}
+\end{document}
